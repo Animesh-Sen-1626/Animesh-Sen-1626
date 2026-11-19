@@ -10,7 +10,7 @@
   <a href="https://github.com/code-with-sen?tab=repositories"><img src="https://img.shields.io/badge/Repos-browse-0b1416?style=for-the-badge&logo=github&logoColor=5ef2e6&labelColor=0b1416&color=113a3d" /></a>
 </p>
 
-### `$ whoami`
+### `$ who am i`
 
 Developer at **Covlant.ai**, building APIs and web apps with TypeScript and Node.js. I like clean backends, well-tested code, and using AI tools to ship faster.
 
