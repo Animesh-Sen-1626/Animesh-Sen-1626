@@ -15,7 +15,7 @@
 
 Software developer at **Covlant.ai**, building backend APIs and web apps with **TypeScript, Node.js and PostgreSQL**. I care about clean API design, well-tested code, and using AI tooling to ship faster.
 
-- 🧩 Solved **602 LeetCode problems** in C++ and Java (319 Medium, 120 Hard) , **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
+- 🧩 Solved **602 LeetCode problems** in C++ (319 Medium, 120 Hard) , **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
 - 🔭 Currently building **[spendly](https://github.com/code-with-sen/spendly)**, an expense tracker made with Claude Code
 - 🧪 Writing tests with **Jest** and learning more about testing strategy
 - ⚙️ Working with **Express + PostgreSQL** APIs in **TypeScript / Node.js** and **Next.js** frontends
