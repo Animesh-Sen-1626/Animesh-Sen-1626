@@ -32,7 +32,7 @@ Software developer at **Covlant.ai**, building backend APIs and web apps with **
 
 | Project | What it is | Stack |
 |---|---|---|
-| [**minigpt-cpp**](https://github.com/code-with-sen/minigpt-cpp) | GPT-2 inference engine from scratch: BPE tokenizer, transformer, KV cache, thread pool, int8 AVX2/NEON kernels. 88× faster than the naive version, verified against PyTorch | C++17, SIMD, CMake |
+| [**minigpt-cpp**](https://github.com/code-with-sen/minigpt-cpp) | GPT-2 inference engine from scratch: BPE tokenizer, transformer, KV cache, thread pool, int8 AVX2/NEON kernels. 105× faster than the naive version (240 tokens/sec on a MacBook Air), verified against PyTorch | C++17, SIMD, CMake |
 | [**event-booking-api**](https://github.com/code-with-sen/event-booking-api) · [frontend](https://event-booking-web-cm99.onrender.com) · [API](https://event-booking-api-l53d.onrender.com) | Concurrency-safe event booking REST API with a React frontend and a live race demo: JWT auth, row-locked bookings, migrations, 27 Jest tests, Docker, CI | TypeScript, Node.js, Express, PostgreSQL, React |
 | [**leetcode-solutions**](https://github.com/code-with-sen/leetcode-solutions) | 602 accepted solutions (163 Easy · 319 Medium · 120 Hard), each committed on the day it was solved | C++, Java |
 | [**spendly**](https://github.com/code-with-sen/spendly) | Expense tracker web app, tested with pytest | Python, Flask |
