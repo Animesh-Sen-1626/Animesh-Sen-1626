@@ -13,13 +13,13 @@
 
 ### `$ who am i`
 
-Software developer at **Covlant.ai**, building backend APIs and web apps with **TypeScript, Node.js and PostgreSQL**. I care about clean API design, well-tested code, and using AI tooling to ship faster.
+Software developer at **Covlant.ai**, building backend APIs and web apps with **TypeScript, Node.js and PostgreSQL**, and integrating **large language models (LLMs)** into production features. I care about clean API design, well-tested code, and AI features that are reliable, measurable and safe to ship.
 
 - 🏗️ Built **[event-booking-api](https://github.com/code-with-sen/event-booking-api)**, a booking API in **TypeScript + Express + PostgreSQL** that never overbooks, even under concurrent requests ([frontend](https://event-booking-web-cm99.onrender.com) · [backend API](https://event-booking-api-l53d.onrender.com))
 - 🧩 Solved **602 LeetCode problems** in C++ and Java (319 Medium, 120 Hard), **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
 - 🔭 Currently building **[spendly](https://github.com/code-with-sen/spendly)**, an expense tracker
 - 🧪 Writing tests with **Jest** and learning more about testing strategy
-- 🤝 Open to collaborating on TypeScript, Node.js and AI-tooling projects
+- 🤝 Open to collaborating on TypeScript, Node.js and LLM-powered projects
 
 ### `$ ls ./stack`
 
