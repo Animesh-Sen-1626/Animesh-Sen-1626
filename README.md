@@ -38,8 +38,8 @@ Developer at **Covlant.ai**, building APIs and web apps with TypeScript and Node
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/code-with-sen/code-with-sen/output/snake-dark.svg?v=3" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/code-with-sen/code-with-sen/output/snake.svg?v=3" />
-    <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/code-with-sen/code-with-sen/output/snake-dark.svg?v=3" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/code-with-sen/code-with-sen/output/snake-dark.svg?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/code-with-sen/code-with-sen/output/snake.svg?v=4" />
+    <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/code-with-sen/code-with-sen/output/snake-dark.svg?v=4" width="100%" />
   </picture>
 </p>
