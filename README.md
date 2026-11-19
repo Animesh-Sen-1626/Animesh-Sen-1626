@@ -15,6 +15,7 @@
 
 Software developer at **Covlant.ai**, building backend APIs and web apps with **TypeScript, Node.js and PostgreSQL**. I care about clean API design, well-tested code, and using AI tooling to ship faster.
 
+- 🏗️ Built **[event-booking-api](https://github.com/code-with-sen/event-booking-api)**, a booking API in **TypeScript + Express + PostgreSQL** that never overbooks, even under concurrent requests
 - 🧩 Solved **602 LeetCode problems** in C++ (319 Medium, 120 Hard) , **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
 - 🔭 Currently building **[spendly](https://github.com/code-with-sen/spendly)**, an expense tracker made with Claude Code
 - 🧪 Writing tests with **Jest** and learning more about testing strategy
@@ -31,6 +32,7 @@ Software developer at **Covlant.ai**, building backend APIs and web apps with **
 
 | Project | What it is | Stack |
 |---|---|---|
+| [**event-booking-api**](https://github.com/code-with-sen/event-booking-api) | Concurrency-safe event booking REST API: JWT auth, row-locked bookings, migrations, 25 Jest tests, Docker, CI | TypeScript, Node.js, Express, PostgreSQL |
 | [**leetcode-solutions**](https://github.com/code-with-sen/leetcode-solutions) | 602 accepted solutions (163 Easy · 319 Medium · 120 Hard), each committed on the day it was solved | C++, Java |
 | [**spendly**](https://github.com/code-with-sen/spendly) | Expense tracker web app built with Claude Code, tested with pytest | Python, Flask |
 | [**typescript-api-starter01**](https://github.com/code-with-sen/typescript-api-starter01) | REST API starter template with Express.js and PostgreSQL | TypeScript, Node.js, PostgreSQL |
