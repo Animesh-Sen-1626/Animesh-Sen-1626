@@ -8,15 +8,17 @@
   <a href="https://www.linkedin.com/in/animesh-tech"><img src="https://img.shields.io/badge/LinkedIn-animesh--tech-0b1416?style=for-the-badge&logo=linkedin&logoColor=5ef2e6&labelColor=0b1416&color=113a3d" /></a>
   <a href="https://covlant.ai"><img src="https://img.shields.io/badge/Covlant.ai-work-0b1416?style=for-the-badge&labelColor=0b1416&color=113a3d" /></a>
   <a href="https://github.com/code-with-sen?tab=repositories"><img src="https://img.shields.io/badge/Repos-browse-0b1416?style=for-the-badge&logo=github&logoColor=5ef2e6&labelColor=0b1416&color=113a3d" /></a>
+  <a href="https://leetcode.com/u/Animesh_Sen/"><img src="https://img.shields.io/badge/LeetCode-602%20solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
 </p>
 
 ### `$ who am i`
 
-Developer at **Covlant.ai**, building APIs and web apps with TypeScript and Node.js. I like clean backends, well-tested code, and using AI tools to ship faster.
+Software developer at **Covlant.ai**, building backend APIs and web apps with **TypeScript, Node.js and PostgreSQL**. I care about clean API design, well-tested code, and using AI tooling to ship faster.
 
+- 🧩 Solved **602 LeetCode problems** in C++ and Java (319 Medium, 120 Hard) across 502 days, **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
 - 🔭 Currently building **[spendly](https://github.com/code-with-sen/spendly)**, an expense tracker made with Claude Code
 - 🧪 Writing tests with **Jest** and learning more about testing strategy
-- ⚙️ Working with **Express + PostgreSQL** APIs and **Next.js** frontends
+- ⚙️ Working with **Express + PostgreSQL** APIs in **TypeScript / Node.js** and **Next.js** frontends
 - 🤝 Open to collaborating on TypeScript, Node.js and AI-tooling projects
 
 ### `$ ls ./stack`
@@ -29,10 +31,17 @@ Developer at **Covlant.ai**, building APIs and web apps with TypeScript and Node
 
 | Project | What it is | Stack |
 |---|---|---|
-| [**spendly**](https://github.com/code-with-sen/spendly) | Expense tracking app built using Claude Code | CSS, JS |
-| [**typescript-api-starter01**](https://github.com/code-with-sen/typescript-api-starter01) | Express.js / PostgreSQL API starter template | TypeScript |
-| [**Covlant.NextPage**](https://github.com/code-with-sen/Covlant.NextPage) | Next.js web pages | JavaScript |
-| [**testing_guide-covalent-**](https://github.com/code-with-sen/testing_guide-covalent-) | Notes on TypeScript and Jest | HTML |
+| [**leetcode-solutions**](https://github.com/code-with-sen/leetcode-solutions) | 602 accepted solutions (163 Easy · 319 Medium · 120 Hard), each committed on the day it was solved | C++, Java |
+| [**spendly**](https://github.com/code-with-sen/spendly) | Expense tracker web app built with Claude Code, tested with pytest | Python, Flask |
+| [**typescript-api-starter01**](https://github.com/code-with-sen/typescript-api-starter01) | REST API starter template with Express.js and PostgreSQL | TypeScript, Node.js, PostgreSQL |
+| [**Covlant.NextPage**](https://github.com/code-with-sen/Covlant.NextPage) | Web pages for Covlant.ai built with the Next.js App Router | Next.js, JavaScript |
+| [**testing_guide-covalent-**](https://github.com/code-with-sen/testing_guide-covalent-) | Notes on unit testing TypeScript code with Jest | TypeScript, Jest |
+
+### `$ leetcode --stats`
+
+<p align="left">
+  <a href="https://leetcode.com/u/Animesh_Sen/"><img src="https://leetcard.jacoblin.cool/Animesh_Sen?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode stats for Animesh_Sen" /></a>
+</p>
 
 ### `$ git log --graph`
 
