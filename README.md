@@ -24,7 +24,7 @@ Software developer at **Covlant.ai**, building backend APIs and web apps with **
 ### `$ ls ./stack`
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=ts,js,nodejs,express,nextjs,react,postgres,jest,html,css,git,github,vscode&theme=dark" alt="Tech stack" />
+  <img src="https://skillicons.dev/icons?i=ts,js,nodejs,express,nextjs,react,postgres,jest,python,flask,html,css,git,github,vscode&theme=dark" alt="Tech stack" />
 </p>
 
 ### `$ ./featured.sh`
