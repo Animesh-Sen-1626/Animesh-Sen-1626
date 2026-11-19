@@ -16,10 +16,9 @@
 Software developer at **Covlant.ai**, building backend APIs and web apps with **TypeScript, Node.js and PostgreSQL**. I care about clean API design, well-tested code, and using AI tooling to ship faster.
 
 - 🏗️ Built **[event-booking-api](https://github.com/code-with-sen/event-booking-api)**, a booking API in **TypeScript + Express + PostgreSQL** that never overbooks, even under concurrent requests ([frontend](https://event-booking-web-cm99.onrender.com) · [backend API](https://event-booking-api-l53d.onrender.com))
-- 🧩 Solved **602 LeetCode problems** in C++ (319 Medium, 120 Hard) , **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
+- 🧩 Solved **602 LeetCode problems** in C++ and Java (319 Medium, 120 Hard), **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
 - 🔭 Currently building **[spendly](https://github.com/code-with-sen/spendly)**, an expense tracker
 - 🧪 Writing tests with **Jest** and learning more about testing strategy
-- ⚙️ Working with **Express + PostgreSQL** APIs in **TypeScript / Node.js** and **Next.js** frontends
 - 🤝 Open to collaborating on TypeScript, Node.js and AI-tooling projects
 
 ### `$ ls ./stack`
@@ -32,12 +31,9 @@ Software developer at **Covlant.ai**, building backend APIs and web apps with **
 
 | Project | What it is | Stack |
 |---|---|---|
-| [**event-booking-api**](https://github.com/code-with-sen/event-booking-api) · [frontend](https://event-booking-web-cm99.onrender.com) · [API](https://event-booking-api-l53d.onrender.com) | Concurrency-safe event booking REST API: JWT auth, row-locked bookings, migrations, 25+ Jest tests, Docker, CI | TypeScript, Node.js, Express, PostgreSQL |
+| [**event-booking-api**](https://github.com/code-with-sen/event-booking-api) · [frontend](https://event-booking-web-cm99.onrender.com) · [API](https://event-booking-api-l53d.onrender.com) | Concurrency-safe event booking REST API with a React frontend and a live race demo: JWT auth, row-locked bookings, migrations, 27 Jest tests, Docker, CI | TypeScript, Node.js, Express, PostgreSQL, React |
 | [**leetcode-solutions**](https://github.com/code-with-sen/leetcode-solutions) | 602 accepted solutions (163 Easy · 319 Medium · 120 Hard), each committed on the day it was solved | C++, Java |
 | [**spendly**](https://github.com/code-with-sen/spendly) | Expense tracker web app, tested with pytest | Python, Flask |
-| [**typescript-api-starter01**](https://github.com/code-with-sen/typescript-api-starter01) | REST API starter template with Express.js and PostgreSQL | TypeScript, Node.js, PostgreSQL |
-| [**Covlant.NextPage**](https://github.com/code-with-sen/Covlant.NextPage) | Web pages for Covlant.ai built with the Next.js App Router | Next.js, JavaScript |
-| [**testing_guide-covalent-**](https://github.com/code-with-sen/testing_guide-covalent-) | Notes on unit testing TypeScript code with Jest | TypeScript, Jest |
 
 ### `$ leetcode --stats`
 
