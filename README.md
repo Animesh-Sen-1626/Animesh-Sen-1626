@@ -15,12 +15,12 @@
 
 Software developer at **Covlant.ai**, building backend APIs and web apps with **TypeScript, Node.js and PostgreSQL**, and integrating **large language models (LLMs)** into production features. I care about clean API design, well-tested code, and AI features that are reliable, measurable and safe to ship.
 
-- 🧠 Built **[minigpt-cpp](https://github.com/code-with-sen/minigpt-cpp)**, GPT-2 inference from scratch in **C++**: matches PyTorch to 5e-6 and runs **3.3× faster** on CPU with int8 SIMD kernels
-- 🏗️ Built **[event-booking-api](https://github.com/code-with-sen/event-booking-api)**, a booking API in **TypeScript + Express + PostgreSQL** that never overbooks, even under concurrent requests ([frontend](https://event-booking-web-cm99.onrender.com) · [backend API](https://event-booking-api-l53d.onrender.com))
-- 🧩 Solved **602 LeetCode problems** in C++ and Java (319 Medium, 120 Hard), **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
-- 🔭 Currently building **[spendly](https://github.com/code-with-sen/spendly)**, an expense tracker
-- 🧪 Writing tests with **Jest** and learning more about testing strategy
-- 🤝 Open to collaborating on TypeScript, Node.js and LLM-powered projects
+-  Built **[minigpt-cpp](https://github.com/code-with-sen/minigpt-cpp)**, GPT-2 inference from scratch in **C++**: matches PyTorch to 5e-6 and runs **3.3× faster** on CPU with int8 SIMD kernels
+-  Built **[event-booking-api](https://github.com/code-with-sen/event-booking-api)**, a booking API in **TypeScript + Express + PostgreSQL** that never overbooks, even under concurrent requests ([frontend](https://event-booking-web-cm99.onrender.com) · [backend API](https://event-booking-api-l53d.onrender.com))
+-  Solved **602 LeetCode problems** in C++ and Java (319 Medium, 120 Hard), **[see the solutions](https://github.com/code-with-sen/leetcode-solutions)**
+-  Currently building **[spendly](https://github.com/code-with-sen/spendly)**, an expense tracker
+-  Writing tests with **Jest** and learning more about testing strategy
+-  Open to collaborating on TypeScript, Node.js and LLM-powered projects
 
 ### `$ ls ./stack`
 
