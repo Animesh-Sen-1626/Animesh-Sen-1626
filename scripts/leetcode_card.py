@@ -1,7 +1,49 @@
 import math, random, datetime, json, sys
 
+BADGE_COLORS = {50: ("#9aa4b2", "#5b6472"), 100: ("#5aa9ff", "#2a5bd7"), 200: ("#b98cff", "#6d3fd8"),
+                365: ("#ffd25a", "#c98a0b"), 500: ("#5fe08f", "#169a4c"), 1000: ("#ff7a7c", "#c0262b")}
+
+def badge_meta(name):
+    import re
+    m = re.search(r"(\d+)\s*Days", name, re.I)
+    if m:
+        n = int(m.group(1)); col = BADGE_COLORS.get(n, ("#ffc552", "#d97706"))
+        return str(n), "DAYS", f"{n} Days", col
+    m = re.search(r"(20\d\d)", name)
+    if "annual" in name.lower() and m:
+        return m.group(1), "ANNUAL", f"Annual {m.group(1)}", ("#ffb347", "#e0620c")
+    short = "".join(w[0] for w in name.split()[:3]).upper()
+    return short, "", name[:16], ("#ffc552", "#d97706")
+
+def badge_svg(b, x, y, font):
+    big, small, label, (c1, c2) = badge_meta(b["name"])
+    gid = f"bg{abs(hash(b['name'])) % 10**6}"
+    cx, cy, r = x + 24, y + 22, 23
+    pts = " ".join(f"{cx + r*math.cos(math.radians(60*k-90)):.1f},{cy + r*math.sin(math.radians(60*k-90)):.1f}" for k in range(6))
+    pts2 = " ".join(f"{cx + (r-5)*math.cos(math.radians(60*k-90)):.1f},{cy + (r-5)*math.sin(math.radians(60*k-90)):.1f}" for k in range(6))
+    fs = 13 if len(big) <= 3 else 10.5
+    o = [f'<defs><linearGradient id="{gid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c1}"/><stop offset="1" stop-color="{c2}"/></linearGradient></defs>',
+         f'<polygon points="{pts}" fill="{c2}" fill-opacity=".18" stroke="url(#{gid})" stroke-width="2"/>',
+         f'<polygon points="{pts2}" fill="url(#{gid})" fill-opacity=".9"/>',
+         f'<text x="{cx}" y="{cy + (2 if small else 5)}" text-anchor="middle" font-size="{fs}" font-weight="800" fill="#0d1117">{big}</text>']
+    if small:
+        o.append(f'<text x="{cx}" y="{cy + 11}" text-anchor="middle" font-size="5.5" font-weight="800" letter-spacing=".6" fill="#0d1117" fill-opacity=".8">{small}</text>')
+    o.append(f'<text x="{x + 56}" y="{y + 19}" font-size="13" font-weight="700" fill="#e6edf3">{label}</text>')
+    if b.get("date"):
+        o.append(f'<text x="{x + 56}" y="{y + 35}" font-size="10.5" fill="#8b949e">{b["date"]}</text>')
+    return "".join(o)
+
+def max_streak(cal):
+    best = cur = 0; prev = None
+    for k in sorted(k for k, v in cal.items() if v):
+        dd = datetime.date.fromisoformat(k)
+        cur = cur + 1 if prev and (dd - prev).days == 1 else 1
+        best = max(best, cur); prev = dd
+    return best
+
 def card(d, out):
-    W, H = 840, 428
+    badges = d.get("badges", [])[:4]
+    W, H = 840, 428 + (76 if badges else 0)
     E, M, Hd = d["easy"], d["medium"], d["hard"]
     TE, TM, TH = d["tot_easy"], d["tot_medium"], d["tot_hard"]
     solved, total = E+M+Hd, TE+TM+TH
@@ -74,8 +116,8 @@ text{{font-family:{font};font-feature-settings:"tnum";}}
         a('</g>')
     # side stat tiles
     tx, tw = 636, 180
-    tiles = [("Hard share", f"{Hd/max(solved,1)*100:.0f}%", C["hard"]),
-             ("Medium share", f"{M/max(solved,1)*100:.0f}%", C["med"]),
+    tiles = [("Max streak", f'{d.get("max_streak", 0)} days', C["med"]),
+             ("Hard share", f"{Hd/max(solved,1)*100:.0f}%", C["hard"]),
              ("Active days", f'{d["active_days"]}', C["easy"])]
     for i, (lab, val, col) in enumerate(tiles):
         y = 102 + i*56
@@ -97,7 +139,7 @@ text{{font-family:{font};font-feature-settings:"tnum";}}
     a(f'<text x="24" y="{hy+20}" font-size="10" fill="{C["dim"]}">last 52 weeks</text>')
     a(f'<text x="24" y="{hy+62}" font-size="22" font-weight="700" fill="{C["text"]}">{sum(cal.values())}</text>')
     a(f'<text x="24" y="{hy+78}" font-size="10.5" fill="{C["dim"]}">submissions</text>')
-    pal = ["#1c2129", "#4a3210", "#8a5a12", "#cc8414", "#ffb02e"]
+    pal = ["#1c2129", "#b4570a", "#dc7410", "#f7951a", "#ffc552"]
     mx = max(list(cal.values()) or [1])
     last_m = None
     for w in range(weeks):
@@ -108,7 +150,7 @@ text{{font-family:{font};font-feature-settings:"tnum";}}
                 a(f'<text x="{gx+w*(cell+g)}" y="{hy-1}" font-size="9" fill="{C["dim"]}">{day.strftime("%b")}</text>')
                 last_m = day.month
             v = cal.get(day.isoformat(), 0)
-            lvl = 0 if v == 0 else min(4, 1+int(3*v/mx))
+            lvl = 0 if v == 0 else (1 if v == 1 else 2 if v == 2 else 3 if v <= 4 else 4)
             a(f'<rect x="{gx+w*(cell+g)}" y="{hy+6+dd*(cell+g)}" width="{cell}" height="{cell}" rx="2.5" fill="{pal[lvl]}" class="fade" style="animation-delay:{w*0.012:.3f}s"/>')
     # legend
     lx = W - 24 - 5*(cell+g) - 60
@@ -117,6 +159,15 @@ text{{font-family:{font};font-feature-settings:"tnum";}}
     for i, c in enumerate(pal):
         a(f'<rect x="{lx+i*(cell+g)}" y="{ly}" width="{cell}" height="{cell}" rx="2.5" fill="{c}"/>')
     a(f'<text x="{lx+5*(cell+g)+4}" y="{ly+9}" font-size="9" fill="{C["dim"]}">more</text>')
+    if badges:
+        by = ly + 30
+        a(f'<line x1="24" x2="{W-24}" y1="{by-12}" y2="{by-12}" stroke="{C["border"]}" stroke-opacity=".7"/>')
+        a(f'<text x="24" y="{by+12}" font-size="10" font-weight="600" letter-spacing="1" fill="{C["dim"]}">BADGES</text>')
+        a(f'<text x="24" y="{by+28}" font-size="10.5" fill="{C["dim"]}">consistency awards</text>')
+        bw2 = (W - 24 - 150) / 4
+        for i, b in enumerate(badges):
+            bx2 = 150 + i*bw2
+            a(f'<g class="fade" style="animation-delay:{.5+.12*i:.2f}s">' + badge_svg(b, bx2, by, font) + '</g>')
     a('</svg>')
     open(out, "w").write("\n".join(s))
     return H + 0
@@ -127,6 +178,7 @@ QUERY = """query($u:String!){
     profile{ranking}
     submitStatsGlobal{acSubmissionNum{difficulty count}}
     userCalendar{submissionCalendar}
+    badges{displayName creationDate}
   }
 }"""
 
@@ -159,7 +211,17 @@ def fetch(user):
     return dict(user=user, rank=u["profile"]["ranking"] or 0,
                 easy=ac.get("Easy", 0), medium=ac.get("Medium", 0), hard=ac.get("Hard", 0),
                 tot_easy=tot["Easy"], tot_medium=tot["Medium"], tot_hard=tot["Hard"],
-                active_days=sum(1 for v in cal.values() if v), calendar=cal, end=end.isoformat())
+                active_days=sum(1 for v in cal.values() if v), calendar=cal, end=end.isoformat(),
+                max_streak=max_streak(cal), badges=pick_badges(u.get("badges") or []))
+
+def pick_badges(raw):
+    bs = [{"name": b.get("displayName") or "", "date": b.get("creationDate") or ""} for b in raw]
+    def prio(b):
+        n = b["name"].lower()
+        return (0 if "days" in n or "annual" in n else 1, b["date"])
+    bs.sort(key=lambda b: b["date"], reverse=True)
+    bs.sort(key=lambda b: 0 if ("days" in b["name"].lower() or "annual" in b["name"].lower()) else 1)
+    return bs[:4]
 
 if __name__ == "__main__":
     import os
