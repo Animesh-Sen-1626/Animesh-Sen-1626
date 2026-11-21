@@ -40,7 +40,7 @@ Software developer at **Covlant.ai**, building backend APIs and web apps with **
 ### `$ leetcode --stats`
 
 <p align="left">
-  <a href="https://leetcode.com/u/Animesh_Sen/"><img src="https://leetcard.jacoblin.cool/Animesh_Sen?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode stats for Animesh_Sen" /></a>
+  <a href="https://leetcode.com/u/Animesh_Sen/"><img src="https://raw.githubusercontent.com/code-with-sen/code-with-sen/main/assets/leetcode-card.svg" alt="LeetCode stats for Animesh_Sen" /></a>
 </p>
 
 ### `$ git log --graph`
