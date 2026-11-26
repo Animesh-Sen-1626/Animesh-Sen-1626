@@ -18,7 +18,7 @@ Software developer at **Covlant.ai**, building backend APIs and web apps with **
 -  Built **[minigpt-cpp](https://github.com/Animesh1626-dev/minigpt-cpp)**, GPT-2 inference from scratch in **C++**: matches PyTorch to 5e-6 and runs **3.3× faster** on CPU with int8 SIMD kernels
 -  Built **[event-booking-api](https://github.com/Animesh1626-dev/event-booking-api)**, a booking API in **TypeScript + Express + PostgreSQL** that never overbooks, even under concurrent requests ([frontend](https://event-booking-web-cm99.onrender.com) · [backend API](https://event-booking-api-l53d.onrender.com))
 -  Solved **602 LeetCode problems** in C++ and Java (319 Medium, 120 Hard), **[see the solutions](https://github.com/Animesh1626-dev/leetcode-solutions)**
--  Currently building **[spendly](https://github.com/code-with-sen/spendly)**, an expense tracker
+-  Currently building **[spendly](https://github.com/Animesh1626-dev/spendly)**, an expense tracker
 -  Writing tests with **Jest** and learning more about testing strategy
 -  Open to collaborating on TypeScript, Node.js and LLM-powered projects
 
@@ -35,7 +35,7 @@ Software developer at **Covlant.ai**, building backend APIs and web apps with **
 | [**minigpt-cpp**](https://github.com/Animesh1626-dev/minigpt-cpp) | GPT-2 inference engine from scratch: BPE tokenizer, transformer, KV cache, thread pool, int8 AVX2/NEON kernels. 105× faster than the naive version (240 tokens/sec on a MacBook Air), verified against PyTorch | C++17, SIMD, CMake |
 | [**event-booking-api**](https://github.com/Animesh1626-dev/event-booking-api) · [frontend](https://event-booking-web-cm99.onrender.com) · [API](https://event-booking-api-l53d.onrender.com) | Concurrency-safe event booking REST API with a React frontend and a live race demo: JWT auth, row-locked bookings, migrations, 27 Jest tests, Docker, CI | TypeScript, Node.js, Express, PostgreSQL, React |
 | [**leetcode-solutions**](https://github.com/Animesh1626-dev/leetcode-solutions) | 602 accepted solutions (163 Easy · 319 Medium · 120 Hard), each committed on the day it was solved | C++, Java |
-| [**spendly**](https://github.com/code-with-sen/spendly) | Expense tracker web app, tested with pytest | Python, Flask |
+| [**spendly**](https://github.com/Animesh1626-dev/spendly) | Expense tracker web app, tested with pytest | Python, Flask |
 
 ### `$ leetcode --stats`
 
