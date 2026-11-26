@@ -1,7 +1,7 @@
 <h2>Hi, I'm Animesh Sen 👋</h2>
 
 <p align="center">
-  <img src="./terminal.svg" alt="animesh@covlant: ./profile.sh — terminal-style profile card" width="100%" />
+  <img src="./terminal.svg?v=2" alt="animesh@covlant: ./profile.sh — terminal-style profile card" width="100%" />
 </p>
 
 <p align="center">
